@@ -7,7 +7,7 @@ from flask_cors import CORS
 from pathlib import Path
 
 app = Flask(__name__)
-CORS(app, origins=["https://"])
+CORS(app, origins=["https://musical-lamp-v65qgq5pp7pfwrrw-3000.app.github.dev"])
 
 # Load trained model
 artifact = joblib.load(Path(__file__).parent / "speech_model.joblib")
@@ -86,3 +86,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
+
